@@ -17,6 +17,6 @@ class InitialBindings extends getx.Bindings {
 }
 
 abstract class OnBoarding {
-  static const stepOne = 'on_boarding/step_one';
-  static const stepTwo = 'on_boarding/step_two';
+  static const stepOne = '/on_boarding/step_one';
+  static const stepTwo = '/on_boarding/step_two';
 }

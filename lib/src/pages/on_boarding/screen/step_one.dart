@@ -1,6 +1,8 @@
+import 'package:alfred/src/constants/i38/translations.dart';
 import 'package:alfred/src/utils/widgets/page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:alfred/src/pages/bindings.dart';
 
 class StepOneScreen extends StatelessWidget {
   const StepOneScreen({Key? key}) : super(key: key);
@@ -21,7 +23,7 @@ class StepOneScreen extends StatelessWidget {
             child: Padding(
               padding: leftMargin,
               child: Text(
-                'Welcome to your\nown personal\nhelper!',
+                I38.welcomeToHelper.tr,
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       height: 2,
                       color: Colors.white,
@@ -35,7 +37,7 @@ class StepOneScreen extends StatelessWidget {
             child: Padding(
               padding: rightMargin,
               child: Text(
-                'We\'ll organize all\nyour pending\nstuff',
+                I38.helpOrganizeStuff.tr,
                 textDirection: TextDirection.rtl,
                 textAlign: TextAlign.right,
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
@@ -62,7 +64,7 @@ class StepOneScreen extends StatelessWidget {
                 color: Colors.white,
                 size: 100,
               ),
-              onPressed: () => Get.toNamed(''),
+              onPressed: () => Get.toNamed(OnBoarding.stepTwo),
             ),
           ),
         ],
