@@ -1,4 +1,4 @@
-import 'package:alfred/src/utils/page.dart';
+import 'package:alfred/src/utils/widgets/page.dart';
 import 'package:flutter/material.dart';
 
 class StepTwoScreen extends StatelessWidget {
