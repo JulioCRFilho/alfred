@@ -1,5 +1,3 @@
-import 'package:alfred/src/constants/i38/translations.dart';
-import 'package:alfred/src/constants/task_categories.dart';
 import 'package:alfred/src/pages/on_boarding/i38.dart';
 import 'package:alfred/src/pages/on_boarding/presenter/step_two.dart';
 import 'package:alfred/src/utils/widgets/alfred/alfred_one.dart';
@@ -7,7 +5,7 @@ import 'package:alfred/src/utils/widgets/page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class StepTwoScreen extends GetView<StepTwoPresenter> with OnBoardingI38 {
+class StepTwoScreen extends GetView<StepTwoPresenter> {
   const StepTwoScreen({Key? key}) : super(key: key);
 
   @override
@@ -33,7 +31,7 @@ class StepTwoScreen extends GetView<StepTwoPresenter> with OnBoardingI38 {
           ),
           Positioned(
             left: 0,
-            top: 220,
+            top: 240,
             child: Padding(
               padding: const EdgeInsets.only(left: 16),
               child: Text(
@@ -49,59 +47,23 @@ class StepTwoScreen extends GetView<StepTwoPresenter> with OnBoardingI38 {
             bottom: 0,
             right: 0,
             child: AlfredOne(
-              scale: 1,
+              scale: .95,
               side: AlfredSide.left,
             ),
           ),
           Positioned(
-            bottom: 150,
-            left: 0,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 8.0),
-              child: Obx(
-                () {
-                  return Column(
-                    children: [
-                      Text(
-                        OnBoardingI38.selectCategory.tr,
-                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                              color: Colors.white,
-                            ),
+            bottom: 50,
+            left: 20,
+            child: InkWell(
+              onTap: controller.getStarted,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 8.0),
+                child: Text(
+                  OnBoardingI38.getStarted.tr,
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        color: Colors.white,
                       ),
-                      DropdownButton<String>(
-                        value: controller.selectedCategory.value,
-                        borderRadius: BorderRadius.circular(20),
-                        dropdownColor: Colors.transparent,
-                        onChanged: controller.setCategory,
-
-                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                              color: Colors.white,
-                            ),
-                        icon: const Icon(
-                          Icons.list,
-                          color: Colors.white,
-                          size: 40,
-                        ),
-                        items: TaskCategories.list
-                            .map(
-                              (e) => DropdownMenuItem<String>(
-                                value: e,
-                                child: Text(
-                                  e,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .bodyLarge
-                                      ?.copyWith(
-                                        color: Colors.white,
-                                      ),
-                                ),
-                              ),
-                            )
-                            .toList(),
-                      ),
-                    ],
-                  );
-                },
+                ),
               ),
             ),
           ),

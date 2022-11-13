@@ -8,4 +8,8 @@ class StepTwoPresenter extends GetxController {
     if (value == null) return;
     selectedCategory.value = value;
   }
+
+  void getStarted() {
+    //TODO: create category selection screen
+  }
 }

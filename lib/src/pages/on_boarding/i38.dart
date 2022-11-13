@@ -7,6 +7,7 @@ abstract class OnBoardingI38 {
             'Start defining the type\nfor the task we\'re\norganizing',
         selectOrCreateCategory: 'You can select\nor create a\ncategory',
         selectCategory: 'Select a\ncategory',
+        getStarted: 'Let\'s\nbegin'
       };
 
   static Map<String, String> get routePT => {
@@ -17,6 +18,7 @@ abstract class OnBoardingI38 {
             'Comece definindo o tipo\nde tarefa que vamos\norganizar',
         selectOrCreateCategory: 'Você pode selecionar\nou criar uma\ncategoria',
         selectCategory: 'Selecione uma\ncategoria',
+        getStarted: 'Vamos\ncomeçar'
       };
 
   static String get enterEmail => 'enter_email';
@@ -30,4 +32,6 @@ abstract class OnBoardingI38 {
   static String get selectOrCreateCategory => 'select_or_create_category';
 
   static String get selectCategory => 'select_category';
+
+  static String get getStarted => 'get_started';
 }

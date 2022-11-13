@@ -19,7 +19,7 @@ class StepOneScreen extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Positioned(
-            top: 30,
+            top: -20,
             left: 0,
             child: Padding(
               padding: leftMargin,
@@ -33,7 +33,7 @@ class StepOneScreen extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 230,
+            top: 170,
             right: 0,
             child: Padding(
               padding: rightMargin,
