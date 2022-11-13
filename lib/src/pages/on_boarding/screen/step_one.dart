@@ -14,7 +14,6 @@ class StepOneScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PageWidget(
-      shrink: true,
       body: Stack(
         fit: StackFit.expand,
         children: [
