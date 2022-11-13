@@ -1,4 +1,5 @@
 import 'package:alfred/src/constants/task_categories.dart';
+import 'package:alfred/src/pages/bindings.dart';
 import 'package:get/get.dart';
 
 class StepTwoPresenter extends GetxController {
@@ -9,7 +10,5 @@ class StepTwoPresenter extends GetxController {
     selectedCategory.value = value;
   }
 
-  void getStarted() {
-    //TODO: create category selection screen
-  }
+  void getStarted() => Get.toNamed(NewTask.categories);
 }
