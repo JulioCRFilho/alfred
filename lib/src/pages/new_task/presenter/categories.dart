@@ -1,8 +1,18 @@
-import 'package:alfred/src/constants/task_categories.dart';
+import 'package:alfred/src/pages/bindings.dart';
 import 'package:get/get.dart';
 
 class CategoriesPresenter extends GetxController {
-  final RxString categorySelected = TaskCategories.list[0].obs;
+  final RxString categorySelected = ''.obs;
 
-  void selectCategory(String category) => categorySelected.value = category;
+  void selectCategory(String category) {
+    categorySelected.value = category;
+    continueTaskCreation();
+  }
+
+  void continueTaskCreation() {
+    Get.toNamed(
+      NewTask.createTask,
+      arguments: {'selected_category': categorySelected.value},
+    );
+  }
 }

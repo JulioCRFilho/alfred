@@ -75,9 +75,7 @@ class CategoriesScreen extends GetView<CategoriesPresenter> {
                 Padding(
                   padding: const EdgeInsets.only(top: 32),
                   child: InkWell(
-                    onTap: () {
-                      //TODO: create new category
-                    },
+                    onTap: controller.continueTaskCreation,
                     child: Container(
                       decoration: const BoxDecoration(
                         shape: BoxShape.circle,

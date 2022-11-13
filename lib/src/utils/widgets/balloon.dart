@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
 
-class AlfredOne extends StatelessWidget {
-  static const String tag = 'AlfredOne';
-
+class BalloonWidget extends StatelessWidget {
+  final Side side;
   final double scale;
 
-  final Side side;
-
-  const AlfredOne({
+  const BalloonWidget({
     Key? key,
-    this.scale = .8,
-    this.side = AlfredSide.right,
+    this.side = BalloonSide.right,
+    this.scale = 5,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Image.asset(
-      'assets/images/alfred_one_$side.png',
+      'assets/images/balloon_$side.png',
       scale: scale,
     );
   }
@@ -24,7 +21,7 @@ class AlfredOne extends StatelessWidget {
 
 typedef Side = String;
 
-abstract class AlfredSide {
+abstract class BalloonSide {
   static const Side left = 'left';
   static const Side right = 'right';
 }
