@@ -1,11 +1,25 @@
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class CreateTaskPresenter extends GetxController {
-  final Rx<String?> category = ''.obs;
+  final TextEditingController categoryField = TextEditingController();
+
+  final TextEditingController titleField = TextEditingController();
 
   @override
   void onInit() {
-    category.value = Get.arguments?['selected_category'];
+    final String? argument = Get.arguments?['selected_category'];
+    categoryField.text = argument ?? '';
     super.onInit();
+  }
+
+  void continueCreation() {
+    Get.toNamed(
+      'TODO: create next screen',
+      arguments: {
+        'selected_category': categoryField.text,
+        'organizer_title': titleField.text,
+      },
+    );
   }
 }
