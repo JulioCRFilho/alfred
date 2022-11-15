@@ -1,13 +1,13 @@
-import 'package:alfred/src/pages/new_task/i38.dart';
-import 'package:alfred/src/pages/new_task/presenter/create_task.dart';
+import 'package:alfred/src/pages/new_organizer/i38.dart';
+import 'package:alfred/src/pages/new_organizer/presenter/create_organizer.dart';
 import 'package:alfred/src/utils/widgets/alfred/alfred_one.dart';
 import 'package:alfred/src/utils/widgets/balloon.dart';
 import 'package:alfred/src/utils/widgets/page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class CreateTaskScreen extends GetView<CreateTaskPresenter> {
-  const CreateTaskScreen({Key? key}) : super(key: key);
+class CreateOrganizerScreen extends GetView<CreateOrganizerPresenter> {
+  const CreateOrganizerScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class CreateTaskScreen extends GetView<CreateTaskPresenter> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    NewTaskI38.nameForTheCategory.tr,
+                    NewOrganizerI38.nameForTheCategory.tr,
                     style: Theme.of(context).textTheme.bodyLarge,
                     textAlign: TextAlign.center,
                   ),
@@ -61,7 +61,7 @@ class CreateTaskScreen extends GetView<CreateTaskPresenter> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    NewTaskI38.nameForTheOrganizer.tr,
+                    NewOrganizerI38.nameForTheOrganizer.tr,
                     style: Theme.of(context).textTheme.bodyLarge,
                     textAlign: TextAlign.center,
                   ),

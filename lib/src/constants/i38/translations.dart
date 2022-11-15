@@ -1,5 +1,5 @@
 import 'package:alfred/src/constants/task_categories.dart';
-import 'package:alfred/src/pages/new_task/i38.dart';
+import 'package:alfred/src/pages/new_organizer/i38.dart';
 import 'package:alfred/src/pages/on_boarding/i38.dart';
 import 'package:get/get.dart';
 
@@ -12,12 +12,12 @@ class I38 extends Translations {
         'en_US': {
           ...TaskCategories.listEN,
           ...OnBoardingI38.routeEN,
-          ...NewTaskI38.routeEN,
+          ...NewOrganizerI38.routeEN,
         },
         'pt_BR': {
           ...TaskCategories.listPT,
           ...OnBoardingI38.routePT,
-          ...NewTaskI38.routePT,
+          ...NewOrganizerI38.routePT,
         },
       };
 

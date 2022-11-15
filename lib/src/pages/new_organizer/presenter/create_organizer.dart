@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-class CreateTaskPresenter extends GetxController {
+class CreateOrganizerPresenter extends GetxController {
   final TextEditingController categoryField = TextEditingController();
 
   final TextEditingController titleField = TextEditingController();

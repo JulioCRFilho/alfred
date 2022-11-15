@@ -1,6 +1,6 @@
 import 'package:alfred/src/constants/task_categories.dart';
-import 'package:alfred/src/pages/new_task/i38.dart';
-import 'package:alfred/src/pages/new_task/presenter/categories.dart';
+import 'package:alfred/src/pages/new_organizer/i38.dart';
+import 'package:alfred/src/pages/new_organizer/presenter/categories.dart';
 import 'package:alfred/src/utils/widgets/alfred/alfred_one.dart';
 import 'package:alfred/src/utils/widgets/page.dart';
 import 'package:flutter/material.dart';
@@ -65,7 +65,7 @@ class CategoriesScreen extends GetView<CategoriesPresenter> {
             child: Column(
               children: [
                 Text(
-                  NewTaskI38.orCreateNewCategory.tr,
+                  NewOrganizerI38.orCreateNewCategory.tr,
                   textAlign: TextAlign.right,
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(
                         color: Colors.white,

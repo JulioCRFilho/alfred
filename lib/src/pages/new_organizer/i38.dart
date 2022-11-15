@@ -1,6 +1,6 @@
 import 'package:alfred/src/constants/i38/translations.dart';
 
-abstract class NewTaskI38 {
+abstract class NewOrganizerI38 {
   static const Map<Language, String> routePT = {
     orCreateNewCategory: 'Ou crie\numa nova\ncategoria',
     nameForTheCategory: 'Nome para a\ncategoria',
