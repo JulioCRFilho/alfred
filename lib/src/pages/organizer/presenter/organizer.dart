@@ -1,3 +1,4 @@
+import 'package:alfred/src/constants/get_arguments/organizer.dart';
 import 'package:get/get.dart';
 
 class OrganizerPresenter extends GetxController {
@@ -5,7 +6,7 @@ class OrganizerPresenter extends GetxController {
 
   @override
   void onInit() {
-    category.value = Get.arguments?['selected_category'];
+    category.value = Args[Args.selectedCategory] as String;
     super.onInit();
   }
 }

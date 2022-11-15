@@ -1,3 +1,4 @@
+import 'package:alfred/src/constants/get_arguments/organizer.dart';
 import 'package:alfred/src/pages/bindings.dart';
 import 'package:get/get.dart';
 
@@ -12,7 +13,9 @@ class CategoriesPresenter extends GetxController {
   void continueTaskCreation() {
     Get.toNamed(
       NewTask.createTask,
-      arguments: {'selected_category': categorySelected.value},
+      arguments: {
+        Args.selectedCategory: categorySelected.value,
+      },
     );
   }
 }

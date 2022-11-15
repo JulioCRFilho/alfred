@@ -1,11 +1,11 @@
-import 'package:alfred/src/pages/bindings.dart';
 import 'package:alfred/src/pages/on_boarding/i38.dart';
+import 'package:alfred/src/pages/on_boarding/presenter/step_one.dart';
 import 'package:alfred/src/utils/widgets/alfred/alfred_one.dart';
 import 'package:alfred/src/utils/widgets/page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class StepOneScreen extends StatelessWidget {
+class StepOneScreen extends GetView<StepOnePresenter> {
   const StepOneScreen({Key? key}) : super(key: key);
 
   static const EdgeInsetsGeometry leftMargin = EdgeInsets.only(left: 16);
@@ -56,7 +56,7 @@ class StepOneScreen extends StatelessWidget {
             bottom: 150,
             right: 20,
             child: InkWell(
-              onTap: () => Get.toNamed(OnBoarding.stepTwo),
+              onTap: controller.stepTwo,
               child: const Icon(
                 Icons.chevron_right,
                 color: Colors.white,

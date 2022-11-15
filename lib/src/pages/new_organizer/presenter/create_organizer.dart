@@ -1,3 +1,4 @@
+import 'package:alfred/src/constants/get_arguments/organizer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
@@ -8,7 +9,7 @@ class CreateOrganizerPresenter extends GetxController {
 
   @override
   void onInit() {
-    final String? argument = Get.arguments?['selected_category'];
+    final String? argument = Args[Args.selectedCategory];
     categoryField.text = argument ?? '';
     super.onInit();
   }
@@ -17,8 +18,8 @@ class CreateOrganizerPresenter extends GetxController {
     Get.toNamed(
       'TODO: create next screen',
       arguments: {
-        'selected_category': categoryField.text,
-        'organizer_title': titleField.text,
+        Args.selectedCategory: categoryField.text,
+        Args.organizerTitle: titleField.text,
       },
     );
   }
