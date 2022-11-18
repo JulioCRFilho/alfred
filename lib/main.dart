@@ -11,7 +11,7 @@ void main() {
       translations: I38(),
       theme: selectedTheme,
       getPages: InitialBindings.routes,
-      initialRoute: OnBoarding.stepOnePath,
+      initialRoute: OnBoarding.stepOne.name,
       locale: const Locale('pt', 'BR'),
     ),
   );

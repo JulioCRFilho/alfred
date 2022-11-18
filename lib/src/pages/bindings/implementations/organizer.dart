@@ -4,26 +4,28 @@ import 'package:alfred/src/pages/organizer/presenter/organizer.dart';
 import 'package:alfred/src/pages/organizer/screen/organizer.dart';
 import 'package:get/get.dart';
 
-class Organizer implements IBindings {
-  const Organizer.organizer({
-    this.name = '/organizer/organizer',
-    this.creator = OrganizerScreen.creator,
-    this.presenter = OrganizerPresenter.creator,
+enum Organizer implements IBindings {
+  organizer(
+    name: '/organizer/organizer',
+    creator: OrganizerScreen.creator,
+    presenter: OrganizerPresenter.creator,
+  );
+
+  const Organizer({
+    required this.name,
+    required this.creator,
+    required this.presenter,
   });
 
   @override
   final Page name;
-
   @override
   final ScreenFactory creator;
-
   @override
   final PresenterFactory presenter;
 
   void navigate({Map<Argument, dynamic>? args}) =>
       Get.toNamed(name, arguments: args);
 
-  static List<IBindings Function()> get pages => [
-        Organizer.organizer,
-      ];
+  static List<IBindings> get pages => Organizer.values;
 }
