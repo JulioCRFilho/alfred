@@ -4,7 +4,7 @@ import 'package:alfred/src/utils/widgets/page.dart';
 import 'package:flutter/material.dart';
 
 class OrganizerScreen extends StatelessWidget {
-  const OrganizerScreen({Key? key}) : super(key: key);
+  const OrganizerScreen.creator({super.key});
 
   @override
   Widget build(BuildContext context) {

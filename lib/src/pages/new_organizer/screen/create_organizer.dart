@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CreateOrganizerScreen extends GetView<CreateOrganizerPresenter> {
-  const CreateOrganizerScreen({Key? key}) : super(key: key);
+  const CreateOrganizerScreen.creator({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,10 @@
-import 'package:alfred/src/pages/bindings.dart';
+import 'package:alfred/src/pages/bindings/implementations/on_boarding.dart';
 import 'package:get/get.dart';
 
 class StepOnePresenter extends GetxController {
-  void stepTwo() => Get.toNamed(OnBoarding.stepTwo);
+  StepOnePresenter();
+
+  factory StepOnePresenter.creator() => StepOnePresenter();
+
+  void stepTwo() => OnBoarding.stepTwo.navigate();
 }

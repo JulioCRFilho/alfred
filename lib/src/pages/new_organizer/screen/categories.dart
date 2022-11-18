@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CategoriesScreen extends GetView<CategoriesPresenter> {
-  const CategoriesScreen({Key? key}) : super(key: key);
+  const CategoriesScreen.creator({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -7,4 +7,4 @@ final ThemeData _lightTheme = ThemeData(
   textTheme: selectedTextTheme,
 );
 
-final ThemeData _darkTheme = ThemeData.dark();
+// final ThemeData _darkTheme = ThemeData.dark();

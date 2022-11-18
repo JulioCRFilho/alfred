@@ -1,8 +1,11 @@
 import 'package:alfred/src/constants/get_arguments/organizer.dart';
+import 'package:alfred/src/pages/bindings/implementations/organizer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class CreateOrganizerPresenter extends GetxController {
+  CreateOrganizerPresenter.creator();
+
   final TextEditingController categoryField = TextEditingController();
 
   final TextEditingController titleField = TextEditingController();
@@ -15,9 +18,8 @@ class CreateOrganizerPresenter extends GetxController {
   }
 
   void continueCreation() {
-    Get.toNamed(
-      'TODO: create next screen',
-      arguments: {
+    Organizer.organizer.navigate(
+      args: {
         Args.selectedCategory: categoryField.text,
         Args.organizerTitle: titleField.text,
       },
