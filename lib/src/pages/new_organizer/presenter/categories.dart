@@ -1,10 +1,9 @@
 import 'package:alfred/src/constants/get_arguments/organizer.dart';
-import 'package:alfred/src/pages/bindings/implementations/new_organizer.dart';
+import 'package:alfred/src/pages/bindings.dart';
+import 'package:alfred/src/pages/new_organizer/bindings.dart';
 import 'package:get/get.dart';
 
 class CategoriesPresenter extends GetxController {
-  CategoriesPresenter.creator();
-
   final RxString categorySelected = ''.obs;
 
   void selectCategory(String category) {
@@ -12,9 +11,12 @@ class CategoriesPresenter extends GetxController {
     continueTaskCreation();
   }
 
-  void continueTaskCreation() => NewOrganizer.createOrganizer.navigate(
-        args: {
-          Args.selectedCategory: categorySelected.value,
-        },
-      );
+  void continueTaskCreation() {
+    Get.toNamed(
+      NewOrganizerBinding.createTask,
+      arguments: {
+        Args.selectedCategory: categorySelected.value,
+      },
+    );
+  }
 }
