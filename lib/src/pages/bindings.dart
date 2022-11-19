@@ -2,6 +2,7 @@ import 'package:alfred/src/pages/new_organizer/presenter/categories.dart';
 import 'package:alfred/src/pages/new_organizer/presenter/create_organizer.dart';
 import 'package:alfred/src/pages/new_organizer/screen/categories.dart';
 import 'package:alfred/src/pages/new_organizer/screen/create_organizer.dart';
+import 'package:alfred/src/pages/on_boarding/presenter/step_one.dart';
 import 'package:alfred/src/pages/on_boarding/presenter/step_two.dart';
 import 'package:alfred/src/pages/on_boarding/screen/step_one.dart';
 import 'package:alfred/src/pages/on_boarding/screen/step_two.dart';
@@ -13,6 +14,9 @@ abstract class InitialBindings extends Bindings {
       GetPage(
         name: OnBoarding.stepOne,
         page: () => const StepOneScreen(),
+        binding: BindingsBuilder(() {
+          Get.lazyPut(() => StepOnePresenter());
+        }),
       ),
       GetPage(
         name: OnBoarding.stepTwo,
