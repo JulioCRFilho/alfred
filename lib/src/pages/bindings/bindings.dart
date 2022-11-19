@@ -6,17 +6,19 @@ abstract class InitialBindings extends Bindings {
   static List<GetPage> get routes {
     return _implementations.map(
       (page) {
-        Get.lazyPut(page.presenter);
+        final screen = page();
+        Get.lazyPut(screen.presenter);
 
         return GetPage(
-          name: page.name,
-          page: page.creator,
+          name: screen.name,
+          page: screen.creator,
         );
       },
     ).toList();
   }
 
-  static List<IBindings> get _implementations => [
+  ///Add named constructors here to increment them on the navigation routing
+  static List<IBindings Function()> get _implementations => [
         ...OnBoarding.pages,
         ...NewOrganizer.pages,
         ...Organizer.pages,
