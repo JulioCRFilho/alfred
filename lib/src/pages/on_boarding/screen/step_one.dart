@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class StepOneScreen extends GetView<StepOnePresenter> {
-  const StepOneScreen.creator({super.key});
+  const StepOneScreen({Key? key}) : super(key: key);
 
-  static const EdgeInsetsGeometry _leftMargin = EdgeInsets.only(left: 16);
-  static const EdgeInsetsGeometry _rightMargin = EdgeInsets.only(right: 16);
+  static const EdgeInsetsGeometry leftMargin = EdgeInsets.only(left: 16);
+  static const EdgeInsetsGeometry rightMargin = EdgeInsets.only(right: 16);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class StepOneScreen extends GetView<StepOnePresenter> {
             top: -20,
             left: 0,
             child: Padding(
-              padding: _leftMargin,
+              padding: leftMargin,
               child: Text(
                 OnBoardingI38.welcomeToHelper.tr,
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
@@ -35,7 +35,7 @@ class StepOneScreen extends GetView<StepOnePresenter> {
             top: 170,
             right: 0,
             child: Padding(
-              padding: _rightMargin,
+              padding: rightMargin,
               child: Text(
                 OnBoardingI38.helpOrganizeStuff.tr,
                 textDirection: TextDirection.rtl,

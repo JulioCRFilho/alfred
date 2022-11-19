@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class StepTwoScreen extends GetView<StepTwoPresenter> {
-  const StepTwoScreen.creator({super.key});
+  const StepTwoScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
