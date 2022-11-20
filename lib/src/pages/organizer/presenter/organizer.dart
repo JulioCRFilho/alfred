@@ -1,4 +1,5 @@
-import 'package:alfred/src/constants/get_arguments/organizer.dart';
+import 'package:alfred/src/constants/get_arguments/arguments.dart';
+import 'package:alfred/src/utils/extensions/type.dart';
 import 'package:get/get.dart';
 
 class OrganizerPresenter extends GetxController {

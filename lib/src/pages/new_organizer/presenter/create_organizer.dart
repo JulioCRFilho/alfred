@@ -1,6 +1,7 @@
-import 'package:alfred/src/constants/get_arguments/organizer.dart';
+import 'package:alfred/src/constants/get_arguments/arguments.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:alfred/src/utils/extensions/type.dart';
 
 class CreateOrganizerPresenter extends GetxController {
   final TextEditingController categoryField = TextEditingController();

@@ -9,12 +9,12 @@ class I38 extends Translations {
   @override
   Map<Language, Map<String, String>> get keys =>
       {
-        'en_US': {
+        enUS: {
           ...TaskCategories.listEN,
           ...OnBoardingI38.routeEN,
           ...NewOrganizerI38.routeEN,
         },
-        'pt_BR': {
+        ptBR: {
           ...TaskCategories.listPT,
           ...OnBoardingI38.routePT,
           ...NewOrganizerI38.routePT,
